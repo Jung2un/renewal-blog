@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('/fonts/PretendardVariable.woff2') format('woff2');
+  font-weight: 45 920;
+  font-display: swap;
+  unicode-range: U+0000-FFFF;
+}
+
+body {
+  font-family: 'Pretendard', Arial, Helvetica, sans-serif;
+}
