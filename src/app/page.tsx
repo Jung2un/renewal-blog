@@ -1,4 +1,4 @@
-import MainSection from "@/components/MainSection";
+import MainSection from "@/components/mainSection/index";
 import SkillSection from "@/components/SkillSection";
 import ContactSection from "@/components/ContactSection";
 import ProjectSection from "@/components/ProjectSection";
@@ -7,7 +7,7 @@ import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 export default function Home() {
   return (
-    <div className="flex max-w-7xl mx-auto flex-col">
+    <div className="flex max-w-7xl mx-auto flex-col items-center">
       {/* 메인 & 자기소개 영역 */}
       <MainSection />
 
