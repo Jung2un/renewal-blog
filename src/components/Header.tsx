@@ -18,9 +18,8 @@ export default function Header() {
 
   const navItems = [
     { label: "About", href: "#main" },
+    { label: "Portfolio", href: "#portfolio" },
     { label: "Project", href: "#project" },
-    { label: "Portpolio", href: "#portfolio" },
-    { label: "Skill", href: "#skill" },
     { label: "Contact", href: "#contact" },
   ];
 
@@ -30,7 +29,7 @@ export default function Header() {
     setTimeout(() => {
       const target = document.querySelector(selector) as HTMLElement | null;
       if (target && lenis) {
-        lenis.scrollTo(target, { offset: -80, duration: 3.5 });
+        lenis.scrollTo(target, { offset: -80, duration: 3 });
       }
     }, 0);
   };

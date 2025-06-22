@@ -12,6 +12,9 @@ const config: Config = {
       screens: {
         xs: "540px",
       },
+      scale: {
+        101: '1.01',
+      },
     },
   },
   plugins: [heroui()],

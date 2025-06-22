@@ -1,29 +1,26 @@
 import MainSection from "@/components/mainSection/index";
-import SkillSection from "@/components/SkillSection";
-import ContactSection from "@/components/ContactSection";
 import ProjectSection from "@/components/ProjectSection";
+import ContactSection from "@/components/ContactSection";
 import PortfolioSection from "@/components/PortfolioSection";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 export default function Home() {
   return (
-    <div className="flex max-w-7xl mx-auto flex-col items-center">
-      {/* 메인 & 자기소개 영역 */}
-      <MainSection />
+    <>
+      <div className="flex max-w-7xl mx-auto flex-col items-center">
+        {/* 메인 & 자기소개 영역 */}
+        <MainSection />
 
-      {/* 프로젝트 소개 영역 */}
-      <ProjectSection />
+        {/* 포트폴리오 영역 */}
+        <PortfolioSection />
 
-      {/* 포트폴리오 영역 */}
-      <PortfolioSection />
+        {/* 프로젝트 소개 영역 */}
+        <ProjectSection />
+      </div>
 
-      {/* 스킬 영역 (기술스택) */}
-      <SkillSection />
-  
-      {/* 연락처 영역 */}
       <ContactSection />
-
+      
       <ScrollToTopButton />
-    </div>
+    </>
   );
 }

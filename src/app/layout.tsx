@@ -5,7 +5,7 @@ import LenisProvider from "@/components/LenisProvider";
 import ThemeProvider from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
-  title: "dev_log",
+  title: "Jung2un.dev",
   description: "프로젝트 기록",
 };
 

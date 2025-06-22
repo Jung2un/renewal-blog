@@ -1,41 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import { cardData } from "@/constants/card";
+import { keyword } from "@/constants/keyword";
 import { HeartIcon, PreviousIcon, NextIcon } from "./icons";
 import { Card, CardHeader, CardBody, Image, Button } from "@heroui/react";
-
-const cardData = [
-  {
-    title: "Movie",
-    singer: "Tom Misch",
-    image: "/images/tom-misch.jpg",
-  },
-  {
-    title: "Stolen Moments",
-    singer: "Cautious Clay",
-    image: "/images/cautious-clay.jpg",
-  },
-  {
-    title: "single",
-    singer: "marcos g",
-    image: "/images/marcos-g.jpg",
-  },
-  {
-    title: "Collide",
-    singer: "Justine Skye",
-    image: "/images/justine-skye.jpg",
-  },
-  {
-    title: "Congratulations",
-    singer: "Post Malone",
-    image: "/images/post-malone.jpg",
-  },
-  {
-    title: "SAD!",
-    singer: "XXXTENTACION",
-    image: "/images/xtentacion.jpg",
-  },
-];
 
 export default function CardSection() {
   const [cardList, setCardList] = useState(
@@ -58,7 +27,29 @@ export default function CardSection() {
   const { title, singer, image, liked } = cardList[current];
 
   return (
-    <div className="md:translate-x-[50px]">
+    <>
+      <div className="mx-4 md:mx-0 mb-10">
+        <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
+          핵심 역량 & 성향
+        </h3>
+        <div className="grid grid-cols-2 gap-2 mt-2">
+          {keyword.slice(0, 4).map(({ label, bgColor, textColor, darkBgColor, darkTextColor }, index) => (
+            <span key={index} className={`transition-transform-background inline-flex items-center justify-center rounded-full py-2 text-sm font-medium ${bgColor} ${textColor} ${darkBgColor} ${darkTextColor}`}>
+              {label}
+            </span>
+          ))}
+        </div>
+        <div className="grid grid-cols-2 gap-2 mt-4">
+          {keyword.slice(4, 8).map(({ label, bgColor, textColor, darkBgColor, darkTextColor }, index) => (
+            <span key={index} className={`transition-transform-background inline-flex items-center justify-center rounded-full py-2 text-sm font-medium ${bgColor} ${textColor} ${darkBgColor} ${darkTextColor}`}>
+              {label}
+            </span>
+          ))}
+        </div>
+      </div>
+      <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
+        🎵 𝐏𝐥𝐚𝐲𝐥𝐢𝐬𝐭
+      </h3>
       <Card className="md:max-w-[225px] py-4 m-4 md:m-0 overflow-visible">
         <CardHeader className="pb-0 pt-2 px-4 items-start flex flex-row justify-between overflow-visible">
           <div>
@@ -115,20 +106,6 @@ export default function CardSection() {
           </div>
         </CardBody>
       </Card>
-      <div className="grid grid-cols-2 gap-2 mt-4 mx-4 md:mx-0">
-        <span className="inline-flex items-center justify-center rounded-full bg-sky-100 md:py-2 py-3 text-sm font-medium text-sky-600 dark:bg-sky-700 dark:text-sky-200">
-          🤝 협동심
-        </span>
-        <span className="inline-flex items-center justify-center rounded-full bg-lime-100 md:py-2 py-3 text-sm font-medium text-lime-600 dark:bg-lime-700 dark:text-lime-200">
-          🔍 꼼꼼함
-        </span>
-        <span className="inline-flex items-center justify-center rounded-full bg-yellow-100 md:py-2 py-3 text-sm font-medium text-yellow-600 dark:bg-yellow-700 dark:text-yellow-200">
-          ⏱️ 성실성
-        </span>
-        <span className="inline-flex items-center justify-center rounded-full bg-pink-100 md:py-2 py-3 text-sm font-medium text-pink-600 dark:bg-pink-700 dark:text-pink-200">
-          ✅ 책임감
-        </span>
-      </div>
-    </div>
+    </>
   );
 }

@@ -30,18 +30,10 @@ const ProfileSection = () => {
         <div className="flex items-center">
           <h2 className="text-2xl font-bold">이정은</h2>
           <a
-            href="https://github.com/Jung2un"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="ml-2 text-black dark:text-white hover:text-gray-600"
-          >
-            <FaGithub className="w-5 h-5" />
-          </a>
-          <a
             href="https://velog.io/@jeun_ios"
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-1 dark:text-green-400 dark:hover:text-green-500 text-green-300 hover:text-green-400"
+            className="ml-2 dark:text-green-400 dark:hover:text-green-500 text-green-300 hover:text-green-400"
           >
             <SiVelog className="w-5 h-5" />
           </a>
@@ -50,7 +42,7 @@ const ProfileSection = () => {
         <p className="text-gray-500 mt-1">
           React 중심의 웹 서비스 개발과 UI/UX 개선에 주력하는 개발자입니다.
           <br />
-          다양한 프로젝트를 통해 Next.js와 TypeScript 주요 기술을 활용하고
+          다양한 프로젝트를 통해 Next.js와 TypeScript를 주요 기술로 활용하고
           있습니다.
         </p>
       </div>
@@ -121,7 +113,7 @@ const SkillSection = () => {
         {skills.map(({ name, Icon, color }) => (
           <div
             key={name}
-            className="group relative p-2 bg-slate-50 dark:bg-zinc-950 rounded-lg"
+            className="group relative p-2 bg-white shadow-[0_2px_6px_rgba(0,0,0,0.07)] dark:bg-zinc-950 rounded-lg"
           >
             <Icon className={`w-8 h-8 ${color}`} />
             <span className="absolute left-1/3 ml-0 mt-3 w-max scale-0 group-hover:scale-100 transition-transform origin-left text-dark dark:text-white text-sm rounded-md px-2 py-1">
