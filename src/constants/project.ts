@@ -1,34 +1,47 @@
 export const projects = [
-  {
-    title: "AI 여행 일정 생성기",
-    description: "맞춤형 여행 일정 생성기",
-    image: "/images/trip-gen.png",
-    tags: ["React", "Next", "TypeScript", "Zustand", "Tailwind", "Vercel"],
-    codeUrl: "https://github.com/Jung2un/trip-generator",
-    demoUrl: "https://tripgen-dev.vercel.app/",
-  },
-  {
-    title: "OneWeb",
-    description: "다양한 UI/UX 요소를 담은 FE 포트폴리오",
-    image: "/images/one-web.png",
-    tags: [
-      "React",
-      "Next",
-      "TypeScript",
-      "Zustand",
-      "styled-components",
-      "framer-motion",
-      "Vercel",
-    ],
-    codeUrl: "https://github.com/Jung2un/one-web",
-    demoUrl: "https://one-web-two.vercel.app/",
-  },
-  {
-    title: "dev-archive",
-    description: "자기소개 및 프로젝트 모음 포트폴리오 (구 블로그)",
-    image: "/images/blog-img.png",
-    tags: ["React", "Next", "TypeScript", "Vercel"],
-    codeUrl: "https://github.com/Jung2un/blog",
-    demoUrl: "https://j2-portfolio.vercel.app/",
-  },
-];
+    {
+      title: "로그 채증 에이전트 개발",
+      period: "📅 2025.01 ~ 2025.03",
+      goal: "교육기관의 보안 진단 및 로그 분석을 위한 Windows 로그 수집 에이전트 개발",
+      tasks: [
+        "Windows 환경 전용 Python 기반 로그 수집 에이전트 100% 단독 개발",
+        "Event Log, 시스템 로그 자동 수집 기능 개발 및 모듈 자동 import 기능 구현",
+        "내부 테스트 환경 구성",
+      ],
+      skills: ["Python", "PowerShell"],
+    },
+    {
+      title: "개인정보보호 자율점검 시스템",
+      period: "📅 2024.11 ~ 2024.12",
+      goal: "한국인터넷진흥원 개인정보보호 자율점검 서비스 구축",
+      tasks: [
+        "관리자 페이지: 자율점검표 관리, 점검 현황 API 연동 기능 구현",
+        "사용자 페이지: 자율점검 수행, 제출 내역 확인 기능 구현",
+        "기존 웹 화면을 모바일 환경 대응을 위해 반응형 UI로 전면 개선",
+      ],
+      skills: ["Java", "Cubrid", "JSTL"],
+    },
+    {
+      title: "AI 개인정보 탐지 시스템 개발",
+      period: "📅 2023.02 ~ 2024.12",
+      goal: "개인정보를 포함한 문서 데이터에 대한 탐지 및 비식별화 처리 시스템 구축",
+      tasks: [
+        "개인정보 탐지·비식별 처리 포함 전체 서비스 UI 100% 단독 구현 및 API 연동",
+        "기 관리, 통계 시각화, 대시보드 등 관리자 기능 포함 UI 고도화",
+        "사용자 로그인 후 키 발급 및 editor에서 테스트 가능한 체험형 UI 구현",
+      ],
+      skills: ["React", "JavaScript"],
+    },
+    {
+      title: "MoisMo: AI 기반 개인정보 탐지 시스템",
+      period: "📅 2024.07 ~ 2024.08",
+      goal: "문서 업로드/다운로드 기능 및 서브라벨링 UI 개발",
+      tasks: [
+        "멀티파일 업로드/다운로드 모달 및 API 연동 구현",
+        "서브라벨링 기능 화면 개발 및 API 연동을 통한 라벨 관리 기능 구현",
+        "",
+      ],
+      skills: ["React", "JavaScript"],
+    },
+  ];
+  

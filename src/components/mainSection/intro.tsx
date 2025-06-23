@@ -1,4 +1,3 @@
-import Image from "next/image";
 import {
   SiTypescript,
   SiReact,
@@ -11,7 +10,7 @@ import {
   SiGit,
   SiVelog,
 } from "react-icons/si";
-import { FaGithub } from "react-icons/fa";
+import Image from "next/image";
 import { RiBearSmileFill } from "react-icons/ri";
 
 const ProfileSection = () => {

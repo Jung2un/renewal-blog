@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Skeleton } from "@heroui/react";
 import { cardData } from "@/constants/card";
 import { keyword } from "@/constants/keyword";
 import { HeartIcon, PreviousIcon, NextIcon } from "./icons";
@@ -11,6 +12,7 @@ export default function CardSection() {
     cardData.map((card) => ({ ...card, liked: false }))
   );
   const [current, setCurrent] = useState(0);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   // 이전 카드로 이동
   const goPrev = () =>
@@ -26,6 +28,10 @@ export default function CardSection() {
   };
   const { title, singer, image, liked } = cardList[current];
 
+  useEffect(() => {
+    setImageLoaded(false);
+  }, [current, image]);
+
   return (
     <>
       <div className="mx-4 md:mx-0 mb-10">
@@ -34,14 +40,20 @@ export default function CardSection() {
         </h3>
         <div className="grid grid-cols-2 gap-2 mt-2">
           {keyword.slice(0, 4).map(({ label, bgColor, textColor, darkBgColor, darkTextColor }, index) => (
-            <span key={index} className={`transition-transform-background inline-flex items-center justify-center rounded-full py-2 text-sm font-medium ${bgColor} ${textColor} ${darkBgColor} ${darkTextColor}`}>
+            <span
+              key={index}
+              className={`transition-transform-background inline-flex items-center justify-center rounded-full py-2 text-sm font-medium ${bgColor} ${textColor} ${darkBgColor} ${darkTextColor}`}
+            >
               {label}
             </span>
           ))}
         </div>
         <div className="grid grid-cols-2 gap-2 mt-4">
           {keyword.slice(4, 8).map(({ label, bgColor, textColor, darkBgColor, darkTextColor }, index) => (
-            <span key={index} className={`transition-transform-background inline-flex items-center justify-center rounded-full py-2 text-sm font-medium ${bgColor} ${textColor} ${darkBgColor} ${darkTextColor}`}>
+            <span
+              key={index}
+              className={`transition-transform-background inline-flex items-center justify-center rounded-full py-2 text-sm font-medium ${bgColor} ${textColor} ${darkBgColor} ${darkTextColor}`}
+            >
               {label}
             </span>
           ))}
@@ -87,11 +99,17 @@ export default function CardSection() {
             >
               <PreviousIcon />
             </Button>
+            {!imageLoaded && (
+              <Skeleton className="w-[200px] h-[200px] rounded-xl absolute top-0 left-0" />
+            )}
             <Image
               alt="Card background"
-              className="object-cover rounded-xl mx-auto z-100"
+              className={`object-cover rounded-xl mx-auto z-100 ${!imageLoaded ? "invisible" : "visible"}`}
               src={image}
               width={200}
+              height={200}
+              loading="lazy"
+              onLoad={() => setImageLoaded(true)}
             />
             <Button
               className="absolute right-[-9.5%] top-1/2 -translate-y-1/2 z-10 rounded-full w-8 h-8 min-w-0 p-0 dark:bg-zinc-800 dark:hover:bg-zinc-700 bg-gray-100 hover:bg-white"

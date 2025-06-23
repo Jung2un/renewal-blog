@@ -4,6 +4,7 @@ import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { SiKakaotalk } from "react-icons/si";
 import { MdEmail } from "react-icons/md";
+import { motion } from "framer-motion";
 
 export default function ContactSection() {
   const [copied, setCopied] = useState(false);
@@ -49,7 +50,13 @@ export default function ContactSection() {
           개발자입니다.
         </p>
 
-        <div className="w-full flex justify-center gap-6 mt-4">
+        <motion.div
+          className="w-full flex justify-center gap-6 mt-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.6 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
           <div
             onClick={handleCopyEmail}
             className="w-12 h-12 flex items-center justify-center rounded-lg bg-white/60 dark:bg-zinc-800 cursor-pointer hover:scale-110 transition-transform shadow border border-zinc-200 dark:border-zinc-700"
@@ -75,7 +82,7 @@ export default function ContactSection() {
           >
             <FaGithub className="text-2xl text-gray-800 dark:text-white" />
           </a>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
