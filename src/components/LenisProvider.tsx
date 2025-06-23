@@ -1,7 +1,7 @@
 'use client'
 
 import Lenis from '@studio-freight/lenis'
-import { createContext, useContext, useEffect, useRef, useState } from 'react'
+import { createContext, useContext, useEffect, useState } from 'react'
 
 const LenisContext = createContext<Lenis | null>(null)
 export const useLenis = () => useContext(LenisContext)
