@@ -52,6 +52,13 @@ const ProfileSection = () => {
 const CareerSection = () => {
   const experiences = [
     {
+      year: "2025.07 - 2025.09",
+      title: "프론트엔드 개발자",
+      company: "🏢 즐거움을더하다",
+      description:
+        "Next.js(Typescript) 기반 모임 커뮤니티 웹/앱 서비스 ‘모임특별시’의 프론트엔드 개발을 담당했습니다.",
+    },
+    {
       year: "2023.04 - 2025.04",
       title: "프론트엔드 개발자",
       company: "🏢 티사이언티픽",
