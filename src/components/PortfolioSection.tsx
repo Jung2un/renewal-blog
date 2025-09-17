@@ -6,6 +6,8 @@ import {
   SiTypescript,
   SiTailwindcss,
   SiStyledcomponents,
+  SiShadcnui,
+  SiReactquery,
 } from "react-icons/si";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -23,6 +25,8 @@ const tagIcon = {
   Vercel: RiVercelFill,
   "styled-components": SiStyledcomponents,
   "framer-motion": TbBrandFramerMotion,
+  "shadcn/ui": SiShadcnui,
+  "React Query": SiReactquery,
 };
 
 const tagColor: Record<string, string> = {
@@ -34,6 +38,8 @@ const tagColor: Record<string, string> = {
   Vercel: "text-black dark:text-white",
   "styled-components": "text-pink-500",
   "framer-motion": "text-yellow-400",
+  "shadcn/ui": "text-blue-500",
+  "React Query": "text-[#FF4154]",
 };
 
 export default function Portfolio() {
