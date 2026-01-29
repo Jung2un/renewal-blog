@@ -52,7 +52,7 @@ export default function Portfolio() {
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false, amount: 0.6 }}
+        viewport={{ once: false, amount: 0.2 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
         {portfolios.map((portfolio, idx) => (
@@ -92,7 +92,6 @@ export default function Portfolio() {
                       className={`relative group/tag flex items-center justify-center w-8 h-8 rounded bg-white dark:bg-zinc-800 shadow text-xl ${colorClass}`}
                     >
                       <Icon />
-                      {/* hover시 툴팁 노출 */}
                       <span className="absolute left-1/2 -translate-x-1/4 translate-y-1 mt-9 px-2 py-1 rounded bg-zinc-100 text-black dark:bg-black dark:text-white text-xs whitespace-nowrap opacity-0 group-hover/tag:opacity-100 transition-opacity z-10 pointer-events-none">
                         {tag}
                       </span>

@@ -3,6 +3,8 @@ import {
   SiReact,
   SiTailwindcss,
   SiNextdotjs,
+  SiVuedotjs,
+  SiNuxtdotjs,
   SiJavascript,
   SiNodedotjs,
   SiPython,
@@ -11,6 +13,7 @@ import {
   SiVelog,
 } from "react-icons/si";
 import Image from "next/image";
+import { GiPineapple } from "react-icons/gi";
 import { RiBearSmileFill } from "react-icons/ri";
 
 const ProfileSection = () => {
@@ -111,9 +114,12 @@ const SkillSection = () => {
     { name: "Next.js", Icon: SiNextdotjs, color: "text-black dark:text-white" },
     { name: "TypeScript", Icon: SiTypescript, color: "text-blue-500" },
     { name: "JavaScript", Icon: SiJavascript, color: "text-yellow-400" },
+    { name: "Vue.js", Icon: SiVuedotjs, color: "text-green-500" },
+    { name: "Nuxt.js", Icon: SiNuxtdotjs, color: "text-green-500" },
     { name: "Node.js", Icon: SiNodedotjs, color: "text-green-600" },
     { name: "Python", Icon: SiPython, color: "text-yellow-300" },
     { name: "Zustand", Icon: RiBearSmileFill, color: "text-orange-400" },
+    { name: "Pinia", Icon: GiPineapple, color: "text-orange-400" },
     { name: "Tailwind", Icon: SiTailwindcss, color: "text-cyan-500" },
     { name: "Figma", Icon: SiFigma, color: "text-pink-500" },
     { name: "Git", Icon: SiGit, color: "text-red-500" },
@@ -128,8 +134,8 @@ const SkillSection = () => {
             key={name}
             className="group relative p-2 bg-white shadow-[0_2px_6px_rgba(0,0,0,0.07)] dark:bg-zinc-950 rounded-lg"
           >
-            <Icon className={`w-8 h-8 ${color}`} />
-            <span className="absolute left-1/3 ml-0 mt-3 w-max scale-0 group-hover:scale-100 transition-transform origin-left text-dark dark:text-white text-sm rounded-md px-2 py-1">
+            <Icon className={`w-7 h-7 ${color}`} />
+            <span className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-max scale-0 group-hover:scale-100 transition-transform origin-top text-dark dark:text-white text-sm bg-zinc-50 dark:bg-zinc-800 rounded-md px-2 py-1 z-10 whitespace-nowrap">
               {name}
             </span>
           </div>
